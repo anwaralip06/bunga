@@ -1,0 +1,38 @@
+@extends('layout.master')
+@section('title','Register')
+@section('content')
+    <h1>Buat Account Baru!</h1>
+    <h2>Sign Up Form</h2>
+
+    <form action="welcome" method="POST">
+        @csrf
+        <label>First name:</label><br>
+        <input type="text" name="first_name"><br><br>
+
+        <label>Last name:</label><br>
+        <input type="text" name="last_name"><br><br>
+
+        <label>Gender:</label><br>
+        <input type="radio" name="gender" value="male"> Male <br>
+        <input type="radio" name="gender" value="female"> Female <br>
+        <input type="radio" name="gender" value="other"> Other <br><br>
+
+        <label>Nationality:</label><br>
+        <select name="nationality">
+            <option value="indonesia">Indonesian</option>
+            <option value="malaysia">Malaysian</option>
+            <option value="singapore">Singaporean</option>
+        </select><br><br>
+
+        <label>Language Spoken:</label><br>
+        <input type="checkbox" name="language[]" value="indonesia"> Bahasa Indonesia <br>
+        <input type="checkbox" name="language[]" value="english"> English <br>
+        <input type="checkbox" name="language[]" value="other"> Other <br><br>
+
+        <label>Bio:</label><br>
+        <textarea name="bio" rows="5" cols="40"></textarea><br><br>
+
+        <button type="submit">Sign Up</button>
+
+    </form>
+@endsection
