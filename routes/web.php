@@ -8,6 +8,6 @@ Route::get('register', [FormController::class, 'register'])->name('register');
 Route::post('welcome', [HomeController::class, 'welcome'])->name('welcome');
 
 Route::get('saya', function () {
-    echo "Hello";
+    echo "Hello World";
 });
 
